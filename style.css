@@ -1,0 +1,248 @@
+<!-- Designed by KISHOR AUGUSTINE, SAIKRISHNAN C Government Engineering college Palakkad sreekrishnapuram on behalf of INVENTO the TECH FEST 2019-2020 -->
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+
+
+.header{
+  height: 100px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+}
+.logo{
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+}
+
+.menu{
+  float: right;
+  line-height: 100px;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn{
+  float: right;
+}
+.show-menu-btn i{
+  line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+  color: #3498db;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+.content{
+  padding: 0 20px;
+}
+.content img{
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+.content p{
+  text-align: justify;
+}
+
+@media screen and (max-width:800px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+}
+
+
+
+.zoom_in_zoom_out{
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+.zoom_in_zoom_out::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(img/bgd.jpg) no-repeat;
+  background-size: cover;
+  opacity: .3;
+  animation: anim 20s linear infinite;
+}
+@keyframes anim {
+  60%{
+    transform: scale(2);
+  }
+  70%{
+    transform: scale(1);
+  }
+}
+
+
+
+.about{
+  padding: 40px 0;
+  background: #f1f1f1;
+  color: #434343;
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.about_shell{
+  background: #fff;
+  padding: 30px;
+}
+.about_shell img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
+}
+
+
+.bgd1{
+      background: url(img/invento.jpg) no-repeat;
+      height:110vh;
+      width:204vh;
+  text-align: center;
+  padding: 335px 0;
+  background-size: cover;
+}
+.contact-form{
+  width: 85%;
+  max-width: 600px;
+  background: #f1f1f1;
+  position: absolute;
+  top: 210%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 30px 40px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 20px #000000b3;
+  font-family: "Montserrat",sans-serif;
+}
+.contact-form h1{
+  margin-top: 0;
+  font-weight: 200;
+}
+
+
+
+.bgd2{
+  background-image:linear-gradient(black,gray,white,black);
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+
+.text{
+	width: 100%;
+	margin-top: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	color:white;
+}
+
+.text h1{
+	font-size: 80px;
+    color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.text h2{
+	font-size: 25px;
+color: #993399;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.timer {
+	text-align: center;
+	font-size: 80px;
+	color:#ffffff;
+	font-family: 'Open Sans', sans-serif;
+
+}

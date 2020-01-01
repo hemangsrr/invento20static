@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>INVENTO</title>
+     <link href="img/favicon.ico" rel="shortcut icon"/>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="textstyle.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="dept.css" />
+    <link rel="stylesheet" href="electricstyle.css" />
+    <link rel="stylesheet" href="gearstyle.css" />
+    <link rel="stylesheet" href="jetpackstyle.css" />
+    <link rel="stylesheet" href="style (2).css" />
+  </head>
+  <style media="screen">
+  canvas{
+    z-index: -1;
+    position: fixed;
+  }
+  @media screen and (max-width: 480px) {
+    #banner p {
+      font-size: 1em;
+    }
+  }
+  </style>
+  <body style="background-color:black;">
+
+
+      <div class="zoom_in_zoom_out">
+        <!--<div class="header">
+          <h2 class="logo">INVENTO</h2>
+          <input type="checkbox" id="chk">
+          <label for="chk" class="show-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+          </label>
+
+          <ul class="menu">
+            <a href="#">Home</a>
+            <a href="#">Evnts</a>
+            <a href="#">Workshops</a>
+            <a href="#">Contact</a>
+            <a href="#">About us</a>
+            <label for="chk" class="hide-menu-btn">
+              <i class="fas fa-times"></i>
+            </label>
+          </ul>
+        </div>-->
+        <canvas id="canvas"></canvas>
+        <!--<section id="banner">-->
+          <div class="inner home">
+
+
+              <svg viewBox="0 -200 960 400">
+                <symbol id="s-text">
+                  <text text-anchor="middle" x="50%" y="40%">INVENTO</text>
+                </symbol>
+
+                <g class = "g-ants">
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+              </svg>
+
+              <svg viewBox="0 100 960 300">
+                <symbol id="s1-text">
+                  <text text-anchor="middle" x="50%" y="80%">2020</text>
+                </symbol>
+
+                <g class = "g-ants">
+                  <use xlink:href="#s1-text" class="text-copy"></use>
+                  <use xlink:href="#s1-text" class="text-copy"></use>
+                  <use xlink:href="#s1-text" class="text-copy"></use>
+                  <use xlink:href="#s1-text" class="text-copy"></use>
+                  <use xlink:href="#s1-text" class="text-copy"></use>
+                </g>
+              </svg>
+              </div>
+            </div>
+        <!--</section>-->
+      <div class="text">
+
+      </div>
+<div class="timer">
+<p id="COUNT"></p>
+<script>
+var countDownDate = new Date("mar 05, 2020 12:00:00").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var distance = countDownDate - now;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 *
+60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 *
+60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("COUNT").innerHTML = days + "D " +
+hours + "H "
++ minutes + "M " + seconds + "S ";
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("COUNT").innerHTML = "EXPIRED";
+}
+}, 1000);
+</script>
+</div>
+
+
+<footer id="footer">
+  <div class="inner">
+    <div class="flex flex-3">
+      <div class="col">
+        <h3>Contact Us</h3>
+        <ul class="alt">
+          <li><b>Coordinator</b></li>
+          <li>Roy Antony - 7907160314</li>
+          <li><b>Secretary</b></li>
+          <li>Rentu Sussan - 7902418037</li>
+          <li><b>Program Convenor</b></li>
+          <li>Karthik P S - 8078128410</li>
+          <li><b>Staff Coordinator</b></li>
+          <li>Dr. A R Jayan - 8129418002</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Address</h3>
+        <ul class="alt">
+          <li>Government Engineering College</li>
+          <li>Mannampatta</li>
+          <li>Sreekrishnapuram</li>
+          <li>Palakkad</li>
+          <li>Kerala</li>
+          <li>Pin 678633</li>
+          <li><b><a href="https://goo.gl/maps/UL5GNMi9VQu">Get Directions on Google Maps</a></b></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Made with <i class="icon fa-heart" style="color:red"></i>	 at GEC Palakkad</h3>
+        <ul class="alt">
+          <li style="text-align:center"><b>./tech_team</b></li>
+          <!--<li style="text-align:center"><b><a href="{% url 'about' %}">About Us</a></b></li>-->
+          <li style="text-align:center">Found a bug or mistake? Whatsapp: <a href="https://api.whatsapp.com/send?phone=919447806863"><b>+919447806863</a></b></li>
+          <li style="text-align:center">© <a href="/"><b>Invento 2020</b></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <ul class="icons">
+      <li><a href="https://twitter.com/inventogec" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="https://facebook.com/inventogec" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+      <li><a href="https://www.instagram.com/inventogec/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+    </ul>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>
